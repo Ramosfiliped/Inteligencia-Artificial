@@ -1,6 +1,7 @@
-# Agentes
+# Inteligência Artificial e Agentes
 
 ## Introdução
+Inteligência Artificial, ou IA, é o campo que estuda a síntese e análise de agentes computacionais que agem de maneira inteligente.
 
 Um **agente** é algo que age em um ambiente, ele faz algo. Portanto animais, aviões, robôs e humanos podem ser considerados agentes.
 
@@ -16,12 +17,12 @@ Um **agente computacional** é um agente o qual as decisões podem ser explicada
 
 Todos os agentes são limitados. Nenhum agente é onisciente ou onipotente. Agentes podem apenas observar tudo sobre o mundo em domínios especializados, onde "o mundo" é muito restrito. Agentes tem memória finita. Agentes no mundo real não têm tempo ilimitado para agir.
 
-## Arquitetura de um Agente
+## Agentes situados em um ambiente
 IA é sobre raciocínio prático: raciocínio para fazer alguma coisa. Algumas percepções, raciocínio, e ações definem um **agente**. Um agente age em um **ambiente**. Um ambiente do agente pode muito bem incluir outros agentes. Vários agentes juntos em um mesmo ambiente é chamado **mundo**.
 
 Um agente pode ser, por exemplo, alguns motores computacionais com sensores físicos e atuadores, chamdos **robôs**, onde o ambiente é uma comfiguração física.
 Um agente pode ser um programa que age em um ambiente puramente computacional, um **programa agente**.
-![Um agente em termos de entrada e saída.](imgs/Agente.png)
+![Um agente em termos de entrada e saída.](../imgs/Agente.png)
 
 A qualquer momento, o que um agente faz depende de:
 * **Conhecimento prévio** sobre o agente e sobre o ambiente;
