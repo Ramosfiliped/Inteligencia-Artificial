@@ -5,7 +5,7 @@ Este capítulo apresenta o problema de um agente decidindo como resolver um obje
 
 ## Sumário
 * [2.1 Resolvendo Problemas Como Busca](./2.1%20-%20Resolvendo%20Problemas%20Como%20Busca/)
-* [2.2 Espaços de Estado]()
+* [2.2 Espaços de Estado](./2.2%20Espa%C3%A7o%20de%20Estados/)
 * [2.3 Busca em Grafos]()
 * [2.4 Algoritmo de Busca Genérico]()
 * [2.5 Estratégia de Busca Desinformada]()
