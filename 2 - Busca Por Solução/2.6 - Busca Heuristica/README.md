@@ -13,3 +13,9 @@ Outra maneira de utilizar a função heurística é sempre selecionar um caminho
 **Busca A*** usa tanto o custo do caminho, como em menor custo caminho primeiro, quanto a informação heurística, como na busca gulosa, para selecionar qual caminho expandir. Para cada caminho na fronteira, **A*** utiliza uma estimativa inicial do caminho total do nó inicial até o nó objetivo restrito a seguir esse caminho inicialmente. Ele usa o **custo(p)**, o custo do caminho encontrado, bem como a função heurística **h(p)**, uma estimativa do custo de *p* até o nó objetivo.
 
 Para cada caminho *p* na fronteira, define ***f(p) = cost(p) + h(p)***. Isso é uma estimativa do custo total de seguir o caminho *p* e então ir para um nó objetivo.    
+
+## Busca Branch-and-Bound
+**Busca branch-and-bound** é uma maneira de combinar a otimização de espaço da busca em profundidade com a informação heurística para encontrar caminhos ótimos.
+É particularmente aplicável quando existe vários caminhos para um objetivo. Assim como a busca **A***, a função heurística *h(n)* é não negativa e menor ou igual ao custo do caminho com menor custo de *n* até um nó objetivo.
+
+A ideia do branch-and-bound é manter o caminho de menor custo até um objetivo encontrado até então, e seu custo. Suponha esse custo é o limite. Se a busca encontra um caminho *p* em que **cost(p) + h(p) >= limite**, *p* pode ser podado. Se um caminho não podado até um objetivo é encontrado, ele pode ser melhor que o antigo melhor caminho. Essa nova solução então é salva e o limite é atualizado para o custo da nova solução.
