@@ -16,6 +16,7 @@ def cost(path):
 
     return cost
 
+#Busca A*
 class MazeAgentAStar():
 
     def __init__(self,env):
@@ -40,6 +41,57 @@ class MazeAgentAStar():
 
         self.env.draw_best(path)
 
+#Busca em Largura
+class MazeAgenteBFS():
+    def __init__(self,env):
+        self.env = env
+        self.percepts = env.initial_percepts()
+        self.F = [[self.percepts['position']]]
+
+    def act(self):
+
+        while self.F:
+            path = self.F.pop(-1)
+
+            self.percepts = self.env.change_state({'path':path.copy()})
+
+            if self.percepts['goal']:
+                break
+
+            for n in self.percepts['available_neighbors']:
+                if n not in path:
+                    self.F.insert(0, path + [n])
+
+        self.env.draw_best(path)
+
+#Busca Menor Custo Primeiro
+class MazeAgenteLowestCost():
+    def __init__(self,env):
+        self.env = env
+        self.percepts = env.initial_percepts()
+        self.F = [[self.percepts['position']]]
+
+    def act(self):
+        self.frontier = []
+
+        # To build the heap, we will use the cost as key and the path as the item
+        # Heap format: (key, item) -> the key is the returned value from the total cost for the given path
+        hp.heappush(self.frontier, (0, [self.percepts["position"]]))
+
+        while (self.frontier):
+            path = hp.heappop(self.frontier)[1]
+            self.percepts = self.env.change_state({"path": path.copy()})
+
+            if (self.percepts["goal"]):
+                break
+            else:
+                for neighbor in self.percepts["available_neighbors"]:
+                    if (neighbor not in path):
+                        hp.heappush(self.frontier, (cost(path + [neighbor]),
+                                                    path + [neighbor]))
+        self.env.draw_best(path)
+
+#Busca em Profundidade
 class MazeAgentDFS():
 
     def __init__(self,env):
@@ -63,6 +115,7 @@ class MazeAgentDFS():
 
         self.env.draw_best(path)
 
+#Busca Branch-and-Bound
 class MazeAgentBB():
 
     def __init__(self,env,bound):
