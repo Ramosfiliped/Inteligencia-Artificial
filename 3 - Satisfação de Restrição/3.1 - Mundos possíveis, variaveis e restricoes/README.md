@@ -10,3 +10,5 @@ Um **mundo possível** é definido para ser uma atribuição total.
 
 ## Restrições
 Em vários domínios, nem todas as atribuições de valores são permissíveis às variáveis. Uma **restrição rígida**, ou simplesmente **restrição**, especifica combinações legais de atribuições de valores a algumas das variáveis.
+
+Um **escopo** é um conjunto de variáveis. Uma **relação** no escopo *S* é uma função de atribuições em *S* para **{true, false}**. Ou seja, 
