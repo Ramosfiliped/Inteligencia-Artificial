@@ -1,0 +1,2 @@
+# Problema de Satisfação de Restrição
+Ao invés de resolver problemas em termos de estados, é tipicamente melhor descrever estados em termos de **características** e argumentos em termo dessas características. Características são descritas usando **variáveis**. Normalmente características não são independentes e são **restrições rígidas** que especificam combinações legais de atribuições de valores para as variáveis.
