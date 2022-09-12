@@ -24,6 +24,7 @@ Proposições podem ser construídas de proposições mais simples usando conect
 | p v q  | p ou q           | disjunção de p e q   |
 | p -> q | p implica q      | implicação de p em q |
 | p <-> q| p se somente se q| equivalência de p e q|
+
 Onde *p* e *q* são proposições.
 
 Os operadores ¬, ^, v, ->, <-> são **conectores lógicos**
