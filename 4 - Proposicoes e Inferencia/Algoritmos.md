@@ -6,6 +6,8 @@ Implementação de algoritmos de consistencia das cláusulas formais
 ```
 KB: Base de Conhecimento
 ```
+**Output**
+Lista com átomos que obrigatoriamente devem ser verdadeiros
 ```
 def BU(KB)
     C = {}
@@ -22,6 +24,8 @@ def BU(KB)
 KB: Base de conhecimento
 Query: Consulta se átomo ou expressão é consequência lógica
 ```
+**Output**
+Se uma consulta é consequência lógica das outras expressões 
 **Algoritmo**
 ```
 def TD(KB, Query)
